@@ -382,7 +382,6 @@ main {
   background-image: url(./assets/hero-area-background.jpg);
   min-height: calc(100vh - 172px);
   display: flex;
-  flex-direction: column;
 }
 
 main .hero {
