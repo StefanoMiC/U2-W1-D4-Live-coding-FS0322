@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500;700&family=Yellowtail&display=swap");
+
+:root {
+  --body-font: "Open Sans", sans-serif;
+  --sans-serif-font: "Roboto", sans-serif;
+  --cursive-font: "Yellowtail", cursive;
+  --clr-dk-blue: #274c5b;
+  --clr-green: #7eb693;
+  --clr-light-green: #eff6f1;
+  --clr-yellow: #efd372;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: var(--body-font);
+  height: 200vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--sans-serif-font);
+  color: var(--clr-dk-blue);
+}
+
+:where(h1, h2, h3, h4, h5, h6).alt {
+  font-family: var(--cursive-font);
+  font-size: 36px;
+  color: var(--clr-green);
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--clr-dk-blue);
+  margin-bottom: 36px;
+}
+
+.container {
+  width: 100%;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-unstyled > li {
+  display: inline-block;
+}
+
+.btn {
+  padding: 24px 60px 24px 32px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn > img {
+  position: relative;
+  left: 20px;
+}
+
+.btn:hover > img {
+  left: 24px;
+}
+
+.btn-yellow {
+  background-color: var(--clr-yellow);
+  color: var(--clr-dk-blue);
+}
+
+.btn-green {
+  background-color: var(--clr-dk-blue);
+  color: white;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-gap-60 {
+  gap: 60px;
+}
+
+header {
+  font-family: var(--sans-serif-font);
+  color: var(--clr-dk-blue);
+  display: flex;
+  align-items: center;
+  padding-block: 40px;
+  height: 172px;
+}
+
+header > nav {
+  font-size: 20px;
+  margin-right: auto;
+}
+
+header > nav .nav-link {
+  padding: 20px;
+  color: var(--clr-dk-blue);
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+header > nav .nav-link:not(.dropdown > .nav-link):hover {
+  color: var(--clr-green);
+}
+
+/* header > nav .dropdown > .nav-link:hover {
+  color: var(--clr-dk-blue);
+} */
+
+header > nav .dropdown {
+  padding-left: 20px;
+}
+
+header > nav .dropdown > .nav-link {
+  padding-left: 0;
+}
+
+header .dropdown .dropdown-list {
+  position: absolute;
+  background-color: var(--clr-light-green);
+  padding: 20px 20px 20px 5px;
+  display: none;
+}
+
+header > nav .dropdown:hover .dropdown-list {
+  display: block;
+}
+
+header .dropdown .dropdown-list .nav-link {
+  display: block;
+  padding-block: 10px;
+}
+
+header button {
+  font-size: 18px;
+  padding: 6px 30px 6px 10px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  border: 1px solid #d4d4d4;
+  background-color: transparent;
+}
+
+header button:hover {
+  background-color: var(--clr-green);
+  color: white;
+  border-color: var(--clr-green);
+}
+
+header > nav,
+header button {
+  font-weight: 500;
+}
+
+header button > span {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--clr-dk-blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background-image: url(./assets/hero-area-background.jpg);
+  min-height: calc(100vh - 172px);
+  display: flex;
+  flex-direction: column;
+}
+
+main .hero {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+section {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+section .card {
+  flex-grow: 1;
+
+  padding-top: 105px;
+  padding-bottom: 95px;
+  padding-left: 55px;
+  border-radius: 30px;
+}
+
+section .card:first-of-type {
+  background-image: url(./assets/home-intro-image-1.jpg);
+  background-size: cover;
+}
+section .card:nth-of-type(2) {
+  background-image: url(./assets/home-intro-image-2.jpg);
+  background-size: cover;
+}
+
+section .card:first-of-type h4,
+section .card:first-of-type h2 {
+  color: white;
+}
+
+section .card h4 {
+  margin-bottom: 0.5rem;
+}
+
+section .card h2 {
+  font-size: 40px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+
+  header.container {
+    max-width: 1600px;
+  }
+
+  header {
+    padding-block: 50px;
+  }
+
+  header > nav {
+    padding-left: 100px;
+  }
+}
